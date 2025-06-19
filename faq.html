@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs | PlantNest</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/faq.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Frequently Asked Questions</h1>
+  </header>
+
+  <section class="faq-section">
+    <div class="faq">
+      <button class="faq-question">What is PlantNest all about?</button>
+      <div class="faq-answer">
+        <p>We provide sustainable, elegant plant-based decor and solutions for homes and workspaces.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="faq-question">Do you offer plant maintenance services?</button>
+      <div class="faq-answer">
+        <p>Yes, we offer monthly maintenance plans for all installations and setups.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="faq-question">Are your plants pet-friendly?</button>
+      <div class="faq-answer">
+        <p>Absolutely! We offer pet-safe, non-toxic plant options as per your request.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 PlantNest</p>
+  </footer>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const answer = btn.nextElementSibling;
+        answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
+      });
+    });
+  </script>
+</body>
+
+</html>
