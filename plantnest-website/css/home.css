@@ -1,0 +1,85 @@
+/* home.css – Landing Page Styles */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+.hero-content {
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.animated-heading {
+  font-size: 3.5rem;
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+.hero-subtext {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.floating-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background: white;
+}
+
+.float-img {
+  width: 150px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.float-img:hover {
+  transform: scale(1.1);
+}
+
+.about-us {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a8d5ba, #f5f5f5);
+}
+
+.about-us h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.about-us p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact Graph | PlantNest</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .graph-container {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    canvas {
+      max-width: 700px;
+      width: 100%;
+      margin: 40px auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>PlantNest Environmental Impact</h1>
+  </header>
+
+  <section class="graph-container">
+    <h2>Carbon Reduction Comparison</h2>
+    <canvas id="carbonChart"></canvas>
+  </section>
+
+  <footer>
+    <p>© 2025 PlantNest</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('carbonChart').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Home Decor', 'Office Space', 'Balcony Setup', 'Cafe Interior'],
+        datasets: [{
+          label: 'CO₂ Reduced (kg)',
+          data: [875, 600, 720, 480],
+          backgroundColor: ['#66bb6a', '#43a047', '#81c784', '#aed581'],
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'kgCO₂e'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

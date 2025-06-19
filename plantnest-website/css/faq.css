@@ -1,0 +1,36 @@
+.faq-section {
+  padding: 60px 20px;
+  max-width: 700px;
+  margin: auto;
+  background: #f0f4c3;
+  border-radius: 12px;
+}
+
+.faq {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background: #aed581;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.faq-question.active {
+  background: #9ccc65;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: white;
+  padding: 0 20px;
+  border-radius: 0 0 8px 8px;
+  transition: max-height 0.4s ease;
+}

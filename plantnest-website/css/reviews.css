@@ -1,0 +1,27 @@
+.reviews-section {
+  padding: 60px 20px;
+  background: #f0f4f3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  color: #444;
+  transition: transform 0.3s ease;
+}
+
+.review-card h4 {
+  margin-top: 20px;
+  font-style: normal;
+  color: #388e3c;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+}
